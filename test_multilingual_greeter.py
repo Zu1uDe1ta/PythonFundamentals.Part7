@@ -93,3 +93,4 @@ class MultilingualGreeterTest(TestCase):
         }
         multilingual_greeter.greet("Jules Winnfield", greetings_dict, 3)
         self.assertEqual("Olá Jules Winnfield\n", stdout_mock.getvalue())
+    
