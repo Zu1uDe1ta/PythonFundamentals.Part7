@@ -34,8 +34,8 @@ def print_language_options(lang_options: Dict[int, str]) -> None:
     Values are strings representing the name of a language
     :return: None
     """
-    for key, value in lang_options:
-        print(f'{key}: {value}')
+    for x in lang_options:
+        print(str(x) + ": " + lang_options(x))
 
 
 def language_input() -> int:
@@ -44,7 +44,7 @@ def language_input() -> int:
     :return: An integer representing the language choice made by the user
     """
     language_choice = input("What is your language choice?: ")
-    return int(input())
+    return language_choice
 
 
 def language_choice_is_valid(lang_options: Dict[int, str], lang_choice: int) -> bool:
@@ -106,9 +106,3 @@ if __name__ == '__main__':
     selected_prompt = f"{get_name_input(name_prompt_dict, chosen_lang)} \n"
     chosen_name = name_input(selected_prompt)
     greet(chosen_name, greetings_dict, chosen_lang)
-
-
-
-
-
-
